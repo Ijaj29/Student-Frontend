@@ -9,11 +9,11 @@ import Home from './Home';
 function App() {
   return (
     <div className="App container-fluid"> 
-      <Navbar/>     
+      {/* <Navbar/>      */}
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/register' element={<Register/>}></Route>
-        <Route path='/studentList' element={<StudentList/>}></Route>
+        {/* <Route path='/' element={<Home/>}></Route> */}
+        {/* <Route path='/register' element={<Register/>}></Route> */}
+        <Route path='/' element={<StudentList/>}></Route>
         <Route path='/edit/:id' element={<EditStud/>}></Route>
       </Routes>
     </div>

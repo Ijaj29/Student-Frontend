@@ -16,7 +16,7 @@ function EditStud() {
   const { id } = useParams();
 
   const FRONTEND_URL = "http://localhost:3000";
-  const BACKEND_URL = "http://localhost:3050/";
+  const BACKEND_URL = "https://student-backend-c616.onrender.com";
 
   const [File, setFile] = useState("");
 
@@ -27,7 +27,7 @@ function EditStud() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3050/api/student/one/${id}`
+        `https://student-backend-c616.onrender.com/api/student/one/${id}`
       );
       setFormInfo(response.data);
       setFile(response.data.file);
@@ -53,7 +53,7 @@ function EditStud() {
     formData.append("file", File);
     try {
       const response = await axios.put(
-        `http://localhost:3050/api/student/${id}`,
+        `https://student-backend-c616.onrender.com/api/student/${id}`,
         formData
       );
       window.alert("Edited Successfully");
@@ -117,7 +117,7 @@ function EditStud() {
               </div>
               <div className="mb-3">
                 <label htmlFor="company" className="form-label">
-                  Company
+                  College
                 </label>
                 <input
                   type="text"

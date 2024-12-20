@@ -15,8 +15,6 @@ function Register() {
   const navigate = useNavigate();
 
   const [File, setFile] = useState("");
-  console.log('File :', File);
-
   const handleImg = (e) => {
     setFile(e.target.files[0]);
   };

@@ -85,7 +85,7 @@ function StudentList() {
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Mobile</th>
-              <th scope="col">Company</th>
+              <th scope="col">College</th>
               <th scope="col">Profile</th>
               <th scope="col">Action</th>
             </tr>
@@ -102,7 +102,7 @@ function StudentList() {
                   <td>
                     {stud.file && (
                       <img
-                        src={`http://localhost:3050/${stud.file}`}
+                        src={`https://student-backend-c616.onrender.com/${stud.file}`}
                         width={"50px"}
                         height={"50px"}
                         style={{borderRadius: '50%'}}
