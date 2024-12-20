@@ -81,6 +81,7 @@ function StudentList() {
           placeholder="Student Name..."
         />
       </div>
+      <div className="d-flex justify-content-end"><h3>Total Count - {dataa.length}</h3> </div>
       <div className="mt-1 border-top">
         <table className="text-center table table-striped">
           <thead>
