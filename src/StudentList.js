@@ -33,7 +33,7 @@ function StudentList() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3050/api/student");
+      const response = await axios.get("https://student-backend-c616.onrender.com/api/student");
       setData(response.data);
       setFilteredData(response.data); // Set filteredData initially
     } catch (error) {
@@ -43,7 +43,7 @@ function StudentList() {
 
   const deleteData = async (id) => {
     try {
-      await axios.delete(`http://localhost:3050/api/student/${id}`);
+      await axios.delete(`https://student-backend-c616.onrender.com/api/student/${id}`);
       fetchData(); // Fetch data again after deletion
     } catch (error) {
       console.error("Error deleting data:", error);

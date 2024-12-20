@@ -11,7 +11,7 @@ function Register() {
   });
   const [errors, setError] = useState(null);
   const FRONTEND_URL = "http://localhost:3000";
-  const BACKEND_URL = "http://localhost:3050";
+  const BACKEND_URL = "https://student-backend-c616.onrender.com/";
   const navigate = useNavigate();
 
   const [File, setFile] = useState("");
@@ -38,7 +38,7 @@ function Register() {
     formData.append("file", File);
     try {
       const response = await axios.post(
-        "http://localhost:3050/api/student",
+        "https://student-backend-c616.onrender.com/api/student",
         formData
       );
       if (response.data.error) {
