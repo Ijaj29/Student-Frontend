@@ -105,6 +105,7 @@ function StudentList() {
                   <td>{stud.email}</td>
                   <td>{stud.mobile}</td>
                   <td>{stud.company}</td>
+                  <td>{stud.paystatus}</td>
                   <td>
                     {stud.file && (
                       <img
