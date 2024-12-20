@@ -33,7 +33,9 @@ function StudentList() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("https://student-backend-c616.onrender.com/api/student");
+      const response = await axios.get(
+        "https://student-backend-c616.onrender.com/api/student"
+      );
       setData(response.data);
       setFilteredData(response.data); // Set filteredData initially
     } catch (error) {
@@ -43,7 +45,9 @@ function StudentList() {
 
   const deleteData = async (id) => {
     try {
-      await axios.delete(`https://student-backend-c616.onrender.com/api/student/${id}`);
+      await axios.delete(
+        `https://student-backend-c616.onrender.com/api/student/${id}`
+      );
       fetchData(); // Fetch data again after deletion
     } catch (error) {
       console.error("Error deleting data:", error);
@@ -87,6 +91,7 @@ function StudentList() {
               <th scope="col">Mobile</th>
               <th scope="col">College</th>
               <th scope="col">Profile</th>
+              <th scope="col">Pay Status</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -105,10 +110,11 @@ function StudentList() {
                         src={`https://student-backend-c616.onrender.com/${stud.file}`}
                         width={"50px"}
                         height={"50px"}
-                        style={{borderRadius: '50%'}}
+                        style={{ borderRadius: "50%" }}
                       />
                     )}
                   </td>
+                  <td>{stud.paystatus}</td>
                   <td>
                     <IconButton
                       aria-label="edit"
