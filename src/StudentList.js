@@ -93,7 +93,6 @@ function StudentList() {
               <th scope="col">College</th>
               <th scope="col">Profile</th>
               <th scope="col">Pay Status</th>
-              <th scope="col">Pay Status</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -116,7 +115,6 @@ function StudentList() {
                       />
                     )}
                   </td>
-                  <td>{stud.paystatus}</td>
                   <td>{stud.paystatus}</td>
                   <td>
                     <IconButton
